@@ -83,7 +83,32 @@ class LinkList {
 		currNode.link = null;
 	}
 
-}
+	//remove given node from data
+
+	public void removeNode(String data) {
+		if (head == null) {
+			System.out.println("Empty List, nothing to delete");
+			return;
+		}
+
+		Node currNode = head;
+		Node prevNode = null;
+		while (currNode.data != data && currNode != null ) {
+			prevNode = currNode;
+			currNode = currNode.link;
+			}
+			if (currNode.data != data) {
+				System.out.println("Node not found");
+				return;
+			} else if(head.data == data){
+				head = head.link;
+			}else{
+				prevNode.link = currNode.link;
+			}
+		}
+	}
+
+
 
 public class LL {
 	public static void main(String[] args) {
@@ -109,7 +134,7 @@ public class LL {
 
 		System.out.println();
 
-		list.removeLast();
+		list.removeNode("List");
 		list.printList();
 	}
 }
