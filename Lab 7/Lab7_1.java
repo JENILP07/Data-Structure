@@ -16,11 +16,11 @@ public class Lab7_1{
         int x = 1;
         while(x > 6){
             System.out.println("Enter 1 for push");
-            System.out.println("      2 for pop");
-            System.out.println("      3 for peep");
-            System.out.println("      4 for change");
-            System.out.println("      5 for display");
-            System.out.println("      6 for break");
+            System.out.println("Enter 2 for pop");
+            System.out.println("Enter 3 for peep");
+            System.out.println("Enter 4 for change");
+            System.out.println("Enter 5 for display");
+            System.out.println("Enter 6 for break");
 
             x = sc.nextInt();
 
@@ -87,7 +87,7 @@ class StackDemo{
 
         //top is pointing to the last element of an array
         if(top >= arr.length-1){
-            System.out.println("---------- Stack Overflow ----------");
+            System.out.println("Stack Overflow");
             return;
         }
 
@@ -104,7 +104,7 @@ class StackDemo{
 
         //array is empty
         if(top == -1){
-            System.out.println("---------- Stack Underflow ----------");
+            System.out.println("Stack Underflow");
             return -1;
         }
 
@@ -120,7 +120,7 @@ class StackDemo{
 
         //check for stack underflow
         if(top - i + 1 < 0){
-            System.out.println("---------- Stack Underflow ----------");
+            System.out.println("Stack Underflow");
             return -1;
         }
 
@@ -132,7 +132,7 @@ class StackDemo{
 
         //check for stack underflow
         if(top - i + 1 < 0){
-            System.out.println("---------- Stack Underflow ----------");
+            System.out.println("Stack Underflow");
             return;
         }
 
